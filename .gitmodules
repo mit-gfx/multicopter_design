@@ -1,0 +1,9 @@
+[submodule "externals/opengl_viewer"]
+	path = externals/opengl_viewer
+	url = https://github.com/mit-gfx/opengl_viewer.git
+[submodule "externals/tinyxml2"]
+	path = externals/tinyxml2
+	url = https://github.com/leethomason/tinyxml2.git
+[submodule "externals/nlopt"]
+	path = externals/nlopt
+	url = https://github.com/stevengj/nlopt.git

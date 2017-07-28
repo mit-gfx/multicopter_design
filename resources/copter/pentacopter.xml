@@ -1,0 +1,122 @@
+<?xml version="1.0" ?>
+<copter>
+  <plate file="plate.obj" density="1180.0">
+    <instance size="0.15 0.15">
+      <translate xyz="0 0 -0.1"/>
+    </instance>
+    <instance size="0.15 0.07">
+      <translate xyz="0 0 -0.148"/>
+    </instance>
+  </plate>
+
+  <battery file="battery.obj" density="2857.1" capacity="2200">
+    <translate xyz="0 0 -0.1"/>
+  </battery>
+
+  <electronics file="electronics.obj" density="601.6">
+    <translate xyz="0 0 -0.158"/>
+  </electronics>
+
+  <tube file="tube.obj" density="1638.9">
+    <instance length="0.675">
+      <translate xyz="0.2625 0 -0.124"/>
+    </instance>
+    <instance length="0.6">
+      <rotate rpy="0 0 90"/>
+      <translate xyz="0 0 -0.076"/>
+    </instance>
+    <instance length="0.6">
+      <translate xyz="0 -0.28 -0.124"/>
+    </instance>
+    <instance length="0.6">
+      <translate xyz="0 0.28 -0.124"/>
+    </instance>
+    <instance length="0.6">
+      <rotate rpy="0 0 90"/>
+      <translate xyz="0.28 0 -0.076"/>
+    </instance>
+  </tube>
+
+  <round_connector file="connector.obj" density="1170.0">
+    <instance>
+      <translate xyz="-0.055 0 -0.124"/>
+    </instance>
+    <instance>
+      <translate xyz="0.055 0 -0.124"/>
+    </instance>
+    <instance>
+      <rotate rpy="0 0 -90"/>
+      <translate xyz="0 0.055 -0.076"/>
+    </instance>
+    <instance>
+      <rotate rpy="0 0 90"/>
+      <translate xyz="0 -0.055 -0.076"/>
+    </instance>
+    <instance>
+      <rotate rpy="0 0 -90"/>
+      <translate xyz="0 0.28 -0.076"/>
+    </instance>
+    <instance>
+      <rotate rpy="0 0 90"/>
+      <translate xyz="0 -0.28 -0.076"/>
+    </instance>
+    <instance>
+      <translate xyz="0 -0.28 -0.124"/>
+    </instance>
+    <instance>
+      <translate xyz="0 0.28 -0.124"/>
+    </instance>
+    <instance>
+      <translate xyz="-0.28 -0.28 -0.124"/>
+    </instance>
+    <instance>
+      <translate xyz="-0.28 0.28 -0.124"/>
+    </instance>
+    <instance>
+      <translate xyz="0.28 -0.28 -0.124"/>
+    </instance>
+    <instance>
+      <translate xyz="0.28 0.28 -0.124"/>
+    </instance>
+    <instance>
+      <translate xyz="0.58 0 -0.124"/>
+    </instance>
+    <instance>
+      <translate xyz="0.28 0 -0.124"/>
+    </instance>
+    <instance>
+      <rotate rpy="0 0 90"/>
+      <translate xyz="0.28 0 -0.076"/>
+    </instance>
+    <instance>
+      <rotate rpy="0 0 -90"/>
+      <translate xyz="0.28 0.28 -0.076"/>
+    </instance>
+    <instance>
+      <rotate rpy="0 0 90"/>
+      <translate xyz="0.28 -0.28 -0.076"/>
+    </instance>
+  </round_connector>
+
+  <motor file="motor.obj" density="4833.3" measurement="motor_14inch_prop.txt"
+    propeller_height="0.019">
+    <instance spin_dir="cw">
+      <translate xyz="-0.28 -0.28 -0.164"/>
+    </instance>
+    <instance spin_dir="ccw">
+      <translate xyz="-0.28 0.28 -0.164"/>
+    </instance>
+    <instance spin_dir="ccw">
+      <translate xyz="0.28 -0.28 -0.164"/>
+    </instance>
+    <instance spin_dir="cw">
+      <translate xyz="0.28 0.28 -0.164"/>
+    </instance>
+    <instance spin_dir="cw">
+      <translate xyz="0.58 0 -0.164"/>
+    </instance>
+  </motor>
+
+  <propeller file="propeller_14inch.obj"/>
+
+</copter>

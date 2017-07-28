@@ -1,0 +1,42 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=3.00cm, right=3.00cm, top=4.00cm, bottom=4.00cm]{geometry}
+
+\title{\textbf{User Guide for\\ Multicopter Design 0.2}}
+
+\author{Tao Du\\taodu@csail.mit.edu
+\and
+Adriana Schulz\\aschulz@csail.mit.edu
+\and
+Bo Zhu\\boolzhu@csail.mit.edu}
+\date{MIT Computer Science and Artificial Intelligence Laboratory}
+
+% Forcing a floating image to be at the top when it is the only element in a page.
+\makeatletter
+\setlength{\@fptop}{0pt}
+\makeatother
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\input{introduction}
+
+\input{installation}
+
+\input{user_interface}
+
+\input{file_format}
+
+\input{acknowledgment}
+
+\bibliographystyle{plain}
+\bibliography{user_guide}
+
+\end{document}

@@ -1,0 +1,104 @@
+<?xml version="1.0" ?>
+<copter>
+  <plate file="plate.obj" density="1180.0">
+    <instance size="0.15 0.15">
+      <!-- Lift by 0.1m to avoid penetrating the ground. -->
+      <translate xyz="0 0 -0.1"/>
+    </instance>
+    <instance size="0.15 0.07">
+      <translate xyz="0 0 -0.1"/>
+      <!-- 0.0024m is the thickness of the plate. -->
+      <translate xyz="0 0 -0.0024"/>
+      <!-- 0.0456m is the size of the connector. -->
+      <translate xyz="0 0 -0.0456"/>
+      <!-- Instead of copying and pasting the three translations here, we will
+           use -0.148 = -0.1 - 0.0024 - 0.0456 below. -->
+    </instance>
+  </plate>
+
+  <battery file="battery.obj" density="2857.1" capacity="2200">
+    <rotate rpy="0 0 90"/>
+    <translate xyz="0 0 -0.1"/>
+  </battery>
+
+  <electronics file="electronics.obj" density="601.6">
+    <!-- The electronic device is placed on top of the upper plate. -->
+    <translate xyz="0 0 -0.148"/>
+    <!-- Lift by 0.01 more because the mesh itself has thickness. -->
+    <translate xyz="0 0 -0.01"/>
+  </electronics>
+
+  <tube file="tube.obj" density="1638.9">
+    <instance length="0.5">
+      <translate xyz="0 0 -0.1"/>
+      <!-- 0.0012 is half of the thickness of a plate. -->
+      <translate xyz="0 0 0.0012"/>
+      <!-- 0.0228 is half of the size of a connector. -->
+      <translate xyz="0 0 0.0228"/>
+    </instance>
+    <instance length="0.5">
+      <rotate rpy="0 0 90"/>
+      <translate xyz="0 0 -0.1"/>
+      <!-- 0.0012 is half of the thickness of a plate. -->
+      <translate xyz="0 0 -0.0012"/>
+      <!-- 0.0228 is half of the size of a connector. -->
+      <translate xyz="0 0 -0.0228"/>
+    </instance>
+    <!-- For simplicity we will use -0.076 and -0.124 below. -->
+  </tube>
+
+  <round_connector file="connector.obj" density="1170.0">
+    <instance>
+      <rotate rpy="0 0 90"/>
+      <translate xyz="0 0 -0.124"/>
+    </instance>
+    <instance>
+      <translate xyz="0 0 -0.076"/>
+    </instance>
+    <instance>
+      <translate xyz="0.23 0 -0.076"/>
+    </instance>
+    <instance>
+      <translate xyz="-0.23 0 -0.076"/>
+    </instance>
+    <instance>
+      <rotate rpy="0 0 90"/>
+      <translate xyz="0 -0.23 -0.124"/>
+    </instance>
+    <instance>
+      <rotate rpy="0 0 -90"/>
+      <translate xyz="0 0.23 -0.124"/>
+    </instance>
+  </round_connector>
+
+  <propeller file="propeller_10inch.obj"/>
+
+  <motor file="motor.obj" density="4833.3" measurement="motor_10inch_prop.txt"
+    propeller_height="0.019">
+    <instance spin_dir="cw">
+      <!-- Location of its parent connector. -->
+      <translate xyz="0.23 0 -0.076"/>
+      <!-- Half size of its parent connector. -->
+      <translate xyz="0 0 -0.0228"/>
+      <!-- 0.018 is the distance between the bottom surface and the center of
+           the motor. -->
+      <translate xyz="0 0 -0.018"/>
+    </instance>
+    <instance spin_dir="ccw">
+      <translate xyz="0 0.23 -0.124"/>
+      <translate xyz="0 0 -0.0228"/>
+      <translate xyz="0 0 -0.018"/>
+    </instance>
+    <instance spin_dir="cw">
+      <translate xyz="-0.23 0 -0.076"/>
+      <translate xyz="0 0 -0.0228"/>
+      <translate xyz="0 0 -0.018"/>
+    </instance>
+    <instance spin_dir="ccw">
+      <translate xyz="0 -0.23 -0.124"/>
+      <translate xyz="0 0 -0.0228"/>
+      <translate xyz="0 0 -0.018"/>
+    </instance>
+  </motor>
+
+</copter>
