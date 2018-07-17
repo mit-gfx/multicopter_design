@@ -13,6 +13,7 @@ users to build their own multicopters. It was a research project led by the
 ![](docs/vtail_simulate.jpg)
 ![](docs/y6_simulate.jpg)
 ![](docs/windows_default_ui.jpg)
+![](docs/demo_simulate.jpg)
 
 Please refer to [docs/user_guide.pdf](docs/user_guide.pdf) for more
 information.
