@@ -85,7 +85,9 @@ const double RoundAngle(const double radian) {
   // round_radian is in (-2pi, 2pi) now.
   if (round_radian < -M_PI) round_radian += period;
   else if (round_radian > M_PI) round_radian -= period;
-  assert(radian >= -M_PI && radian <= M_PI);
+  // Clamp in case we have numerical errors.
+  if (round_radian > M_PI) round_radian = M_PI;
+  if (round_radian < -M_PI) round_radian = -M_PI;
   return round_radian;
 }
 
