@@ -29,6 +29,7 @@ git submodule and the provided script to download and configure them.
 * graphics_codebase: my own graphics viewer (git submodule + script).
 * nlopt: an open-source C++ optimization library (git submodule).
 * tinyxml2: an XML parser (git submodule).
+* wget: Windows will require the installation of wget (http://gnuwin32.sourceforge.net/packages/wget.htm) in order to utilize the ./windows_setup.ps1 script 
 
 ## How to build
 Use git to clone the project from github. Note that `--recursive` is necessary
